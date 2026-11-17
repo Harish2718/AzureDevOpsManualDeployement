@@ -18,3 +18,16 @@ public class GreetingController {
     return new Greeting(counter.incrementAndGet(), template.formatted(name));
   }
 }
+package hello;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class GreetingController {
+
+    @GetMapping("/greeting")
+    public String greeting() {
+        return "Hello! Java backend is running successfully.";
+    }package hello;
+

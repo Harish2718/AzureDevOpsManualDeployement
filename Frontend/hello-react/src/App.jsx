@@ -5,7 +5,7 @@ function App() {
   const [message, setMessage] = useState("Loading...");
 
   useEffect(() => {
-    fetch("http://localhost:8080/greeting")
+    fetch ('/greeting')
       .then((response) => response.json())
       .then((data) => setMessage(data.content))
       .catch(() => setMessage("Could not connect to Java backend"));
